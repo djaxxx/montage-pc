@@ -5,6 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Site Vitrine</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    .cta {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta:hover {
+      background: #0056b3;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #222;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card p {
+      padding: 15px;
+      font-size: 1rem;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #0056b3;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -30,7 +164,6 @@
 
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p>Quelques réalisations :</p>
     <div class="portfolio-grid">
       <div class="card">
         <img src="images/pc1.jpg" alt="PC Gaming haut de gamme">
@@ -45,16 +178,18 @@
 
   <section id="apropos">
     <h2>À propos</h2>
-    <p>Passionné d’informatique depuis toujours, je propose des services fiables et personnalisés pour vos configurations PC.</p>
+    <p style="text-align:center; max-width:800px; margin:auto;">Passionné d’informatique depuis toujours, je propose des services fiables et personnalisés pour vos configurations PC.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <form>
-
-      <label>Nom :<br><input type="text" name="nom"></label><br><br>
-      <label>Email :<br><input type="email" name="email"></label><br><br>
-      <label>Message :<br><textarea name="message"></textarea></label><br><br>
+      <label>Nom :</label>
+      <input type="text" name="nom">
+      <label>Email :</label>
+      <input type="email" name="email">
+      <label>Message :</label>
+      <textarea name="message" rows="5"></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
