@@ -1,126 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PC sur Mesure - Expert en Assemblage</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - PC sur Mesure</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Votre PC sur Mesure</h1>
-    <p>Assemblé par un expert passionné</p>
+    <h1>PC sur Mesure</h1>
+    <p>Des setups uniques pour chaque passionné</p>
     <nav>
-      <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#apropos">À propos</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="#contact" class="cta">Devis Gratuit</a>
   </header>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-icon">🖥️</span>
-        <h3>Montage PC</h3>
-        <p>Assemblage professionnel, installation complète de l’OS et garantie sur mesure.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">💡</span>
-        <h3>Conseil & Diagnostic</h3>
-        <p>Accompagnement dans le choix des composants selon vos besoins et budget.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-icon">⚡</span>
-        <h3>Upgrade & Dépannage</h3>
-        <p>Amélioration de performances, maintenance et optimisation thermique.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="card">
-        <div class="card-img-wrapper">
-          <img src="Média.jfif" alt="Setup PC haut de gamme" />
-        </div>
-        <div class="card-content">
-          <h3>Setup White Edition</h3>
-          <p>Build élégant au look blanc, refroidissement liquide et gestion parfaite des câbles.</p>
-          <div class="specs">
-            <span class="spec-tag">RTX 4080</span>
-            <span class="spec-tag">i9 13900K</span>
-            <span class="spec-tag">32GB DDR5</span>
-          </div>
-        </div>
+    <h2>Mes Réalisations</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="/Média.jfif" alt="Setup White Edition">
+        <div class="caption">Setup White Edition – i5 14600KF / RTX 4060 TI / 35Go ram DDR5 / Watercooling</div>
       </div>
-
-      <div class="card">
-        <div class="card-img-wrapper">🎮</div>
-        <div class="card-content">
-          <h3>PC Gaming Haut de Gamme</h3>
-          <p>Performance maximale pour le jeu en 4K ultra et VR.</p>
-          <div class="specs">
-            <span class="spec-tag">RTX 4090</span>
-            <span class="spec-tag">Ryzen 9</span>
-            <span class="spec-tag">64GB RAM</span>
-          </div>
-        </div>
+      <div class="gallery-item">
+        <img src="images/setup2.jpg" alt="Setup Gaming RGB">
+        <div class="caption">Setup Gaming RGB – Ryzen 9 / RTX 4090 / 64GB</div>
       </div>
-
-      <div class="card">
-        <div class="card-img-wrapper">🎨</div>
-        <div class="card-content">
-          <h3>Workstation Créative</h3>
-          <p>Puissance et stabilité pour montage vidéo 8K et rendu 3D.</p>
-          <div class="specs">
-            <span class="spec-tag">RTX 4070</span>
-            <span class="spec-tag">Ryzen 7</span>
-            <span class="spec-tag">64GB RAM</span>
-          </div>
-        </div>
+      <div class="gallery-item">
+        <img src="images/setup3.jpg" alt="Workstation Créative">
+        <div class="caption">Workstation Créative – RTX 4070 / 64GB / 8K Ready</div>
       </div>
-
-      <div class="card">
-        <div class="card-img-wrapper">💼</div>
-        <div class="card-content">
-          <h3>PC Bureautique Silencieux</h3>
-          <p>Solution compacte, sans bruit et durable pour la productivité.</p>
-          <div class="specs">
-            <span class="spec-tag">Core i5</span>
-            <span class="spec-tag">SSD 1To</span>
-            <span class="spec-tag">16GB RAM</span>
-          </div>
-        </div>
+      <div class="gallery-item">
+        <img src="images/setup4.jpg" alt="Mini ITX Performance">
+        <div class="caption">Mini ITX Compact – i7 / RTX 4060 / Silence total</div>
       </div>
     </div>
   </section>
 
   <section id="apropos">
     <h2>À propos</h2>
-    <div class="about-content">
-      <p>Chaque configuration est pensée sur mesure. Mon objectif : offrir un équilibre parfait entre esthétique, silence et performance.</p>
-    </div>
+    <p>Chaque machine est conçue avec soin, performance et esthétique. Du choix des composants au montage final, je conçois des setups adaptés à vos usages et votre style.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <form>
-      <label>Nom</label>
-      <input type="text" placeholder="Votre nom" required>
-      <label>Email</label>
-      <input type="email" placeholder="votre@email.com" required>
-      <label>Message</label>
-      <textarea rows="6" placeholder="Décrivez votre projet..." required></textarea>
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Votre message..." required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 PC sur Mesure - Tous droits réservés</p>
+    <p>&copy; 2025 PC sur Mesure</p>
   </footer>
+
+  <div id="lightbox">
+    <img src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
