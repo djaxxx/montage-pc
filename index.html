@@ -1,67 +1,155 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - PC sur Mesure</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC sur Mesure | Configurations Haut de Gamme</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>PC sur Mesure</h1>
-    <p>Des setups uniques pour chaque passionné</p>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#apropos">À propos</a>
-      <a href="#contact">Contact</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">PC<span class="highlight">Pro</span></div>
+            <ul class="nav-menu">
+                <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
-  </header>
 
-  <section id="portfolio">
-    <h2>Mes Réalisations</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="/Média.jfif" alt="Setup White Edition">
-        <div class="caption">Setup White Edition – i5 14600KF / RTX 4060 TI / 35Go ram DDR5 / Watercooling</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/setup2.jpg" alt="Setup Gaming RGB">
-        <div class="caption">Setup Gaming RGB – Ryzen 9 / RTX 4090 / 64GB</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/setup3.jpg" alt="Workstation Créative">
-        <div class="caption">Workstation Créative – RTX 4070 / 64GB / 8K Ready</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/setup4.jpg" alt="Mini ITX Performance">
-        <div class="caption">Mini ITX Compact – i7 / RTX 4060 / Silence total</div>
-      </div>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Configurations PC</span>
+                <span class="title-line">sur Mesure</span>
+            </h1>
+            <p class="hero-subtitle">Des setups uniques pour chaque passionné</p>
+            <p class="hero-description">
+                Chaque machine est conçue avec soin, performance et esthétique. 
+                Du choix des composants au montage final, je conçois des setups 
+                adaptés à vos usages et votre style.
+            </p>
+            <div class="hero-buttons">
+                <a href="#realisations" class="btn btn-primary">Voir mes réalisations</a>
+                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="apropos">
-    <h2>À propos</h2>
-    <p>Chaque machine est conçue avec soin, performance et esthétique. Du choix des composants au montage final, je conçois des setups adaptés à vos usages et votre style.</p>
-  </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Mes Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Montage PC Gaming</h3>
+                    <p>Configurations optimisées pour le gaming haute performance avec RGB et refroidissement avancé.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Setup Personnalisé</h3>
+                    <p>Design unique avec watercooling custom, câble management impeccable et éclairage sur mesure.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Conseil & Accompagnement</h3>
+                    <p>Aide au choix des composants selon votre budget et vos besoins spécifiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Nom" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Votre message..." required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
+    <!-- Réalisations Section -->
+    <section id="realisations" class="realisations">
+        <div class="container">
+            <h2 class="section-title">Mes Réalisations</h2>
+            <p class="section-subtitle">Découvrez mes dernières configurations</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/setup1.jpg" alt="Setup Gaming RGB">
+                        <div class="placeholder-image">Setup 1</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Gaming Beast RGB</h3>
+                        <p>RTX 4060 TI • I5 14600KF • 32GB DDR5 </p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/setup2.jpg" alt="Setup Workstation">
+                        <div class="placeholder-image">Setup 2</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Workstation Pro</h3>
+                        <p>RTX 4070 super • Ryzen 7 7800X3D • 32GB DDR5</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/setup3.jpg" alt="Setup Watercooling">
+                        <div class="placeholder-image">Setup 3</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Custom Loop White</h3>
+                        <p>RTX 5070 Ti • Ryzen 7 7800X3D • 32GB DDR5</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <div class="gallery-image">
+                        <img src="images/setup4.jpg" alt="Setup Compact">
+                        <div class="placeholder-image">Setup 4</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Mini-ITX Elite</h3>
+                        <p>RTX 4060 Ti • Ryzen 5 7600X • Compact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 PC sur Mesure</p>
-  </footer>
+    <!-- Contact Section -->                
+              <section id="contact" class="contact">
+                  <div class="container">
+                      <h2 class="section-title">Contactez-moi</h2>
+                      <p class="section-subtitle">Prêt à construire votre setup de rêve ?</p>
+                      
+                      <div class="contact-content">
+                          <div class="contact-info">
+                              <div class="contact-item">
+                                  <div class="contact-icon">📧</div>
+                                  <div>
+                                      <h3>Email</h3>
+                                      <a href="mailto:jacques.tirot@outlook.com?">votre.email@exemple.com</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PC sur Mesure. Tous droits réservés.</p>
+        </div>
+    </footer>
 
-  <div id="lightbox">
-    <img src="" alt="">
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
