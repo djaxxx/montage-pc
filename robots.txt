@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://djaxxx.github.io/montage-pc/sitemap.xml
