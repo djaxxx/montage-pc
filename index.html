@@ -1,143 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Montage PC sur mesure haut de gamme. Configurations gaming, workstation et watercooling custom. Design unique et performance maximale.">
+    <meta name="keywords"
+        content="PC gamer, montage PC, configuration sur mesure, watercooling, workstation, setup gaming, hardware">
+    <meta name="author" content="PC sur Mesure">
+    <meta property="og:title" content="PC sur Mesure | Configurations Haut de Gamme">
+    <meta property="og:description"
+        content="Créez votre setup de rêve avec un montage PC professionnel et personnalisé. Gaming, Workstation, Watercooling.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/setup1.jfif">
+
     <title>PC sur Mesure | Configurations Haut de Gamme</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome pour les icônes (plus propre que les emojis) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
+    <div class="cursor-particle-container"></div>
+    <header class="navbar">
         <div class="nav-container">
             <div class="logo">PC<span class="highlight">Pro</span></div>
-            <ul class="nav-menu">
-                <li><a href="#accueil" class="nav-link">Accueil</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#realisations" class="nav-link">Réalisations</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#accueil" class="nav-link">Accueil</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#realisations" class="nav-link">Réalisations</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-    </nav>
+    </header>
 
-    <section id="accueil" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">Configurations PC</span>
-                <span class="title-line">sur Mesure</span>
-            </h1>
-            <p class="hero-subtitle">Des setups uniques pour chaque passionné</p>
-            <p class="hero-description">
-                Chaque machine est conçue avec soin, performance et esthétique. 
-                Du choix des composants au montage final, je conçois des setups 
-                adaptés à vos usages et votre style.
-            </p>
-            <div class="hero-buttons">
-                <a href="#realisations" class="btn btn-primary">Voir mes réalisations</a>
-                <a href="#contact" class="btn btn-secondary">Me contacter</a>
+    <main>
+        <section id="accueil" class="hero">
+            <div class="hero-bg-elements">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
             </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Mes Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Montage PC Gaming</h3>
-                    <p>Configurations optimisées pour le gaming haute performance avec RGB et refroidissement avancé.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Setup Personnalisé</h3>
-                    <p>Design unique avec watercooling custom, câble management impeccable et éclairage sur mesure.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Conseil & Accompagnement</h3>
-                    <p>Aide au choix des composants selon votre budget et vos besoins spécifiques.</p>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Configurations PC</span>
+                    <span class="title-line">sur Mesure</span>
+                </h1>
+                <p class="hero-subtitle">Des setups uniques pour chaque passionné</p>
+                <p class="hero-description">
+                    Chaque machine est conçue avec soin, performance et esthétique.
+                    Du choix des composants au montage final, je conçois des setups
+                    adaptés à vos usages et votre style.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#realisations" class="btn btn-primary">Voir mes réalisations</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </section>
 
-    <section id="realisations" class="realisations">
-        <div class="container">
-            <h2 class="section-title">Mes Réalisations</h2>
-            <p class="section-subtitle">Découvrez mes dernières configurations</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="images/setup1.jfif" alt="Setup Gaming RGB">
-                        <div class="placeholder-image">Setup 1</div>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Gaming Beast RGB</h3>
-                        <p>RTX 5070 • I5 14600KF • 32GB DDR5 </p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="images/setup2.jpg" alt="Setup Workstation">
-                        <div class="placeholder-image">Setup 2</div>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Workstation Pro</h3>
-                        <p>RTX 4070 super • Ryzen 7 7800X3D • 32GB DDR5</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="images/setup3.jpg" alt="Setup Watercooling">
-                        <div class="placeholder-image">Setup 3</div>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Custom Loop White</h3>
-                        <p>RTX 5070 Ti • Ryzen 7 7800X3D • 32GB DDR5</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <div class="gallery-image">
-                        <img src="images/setup4.jpg" alt="Setup Compact">
-                        <div class="placeholder-image">Setup 4</div>
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3>Mini-ITX Elite</h3>
-                        <p>RTX 4060 Ti • Ryzen 5 7600X • Compact</p>
-                    </div>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Mes Services</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Montage PC Gaming</h3>
+                        <p>Configurations optimisées pour le gaming haute performance avec RGB et refroidissement
+                            avancé.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-paintbrush"></i></div>
+                        <h3>Setup Personnalisé</h3>
+                        <p>Design unique avec watercooling custom, câble management impeccable et éclairage sur mesure.
+                        </p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h3>Conseil & Accompagnement</h3>
+                        <p>Aide au choix des composants selon votre budget et vos besoins spécifiques.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-moi</h2>
-            <p class="section-subtitle">Prêt à construire votre setup de rêve ?</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:jacques.tirot@outlook.com?subject=Demande de configuration PC&body=Bonjour,%0D%0A%0D%0AVoici les informations pour ma demande :%0D%0A%0D%0A- Besoins (Conseil, Montage, Accompagnement de A à Z) :%0D%0A- Budget :%0D%0A- Deadline (approximative) :%0D%0A- Envie particulière (Esthétisme, particularité) :%0D%0A%0D%0AMerci !">Envoyez moi votre demande !</a>
+        <section id="realisations" class="realisations">
+            <div class="container">
+                <h2 class="section-title">Mes Réalisations</h2>
+                <p class="section-subtitle">Découvrez mes dernières configurations</p>
+
+                <div class="gallery-grid">
+                    <!-- Setup 1 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="images/setup1.png" alt="Setup Gaming RGB avec RTX 5070" loading="lazy" width="600"
+                                height="450">
                         </div>
+                        <div class="gallery-content">
+                            <h3>Gaming Beast RGB</h3>
+                            <div class="specs-tags">
+                                <span class="tech-tag">RTX 5070</span>
+                                <span class="tech-tag">i5 14600KF</span>
+                                <span class="tech-tag">32GB DDR5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Setup 2 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="images/setup2.jpg" alt="Setup Workstation Pro avec RTX 4070" loading="lazy"
+                                width="600" height="450">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Workstation Pro</h3>
+                            <div class="specs-tags">
+                                <span class="tech-tag">RTX 4070 Super</span>
+                                <span class="tech-tag">Ryzen 7 7800X3D</span>
+                                <span class="tech-tag">32GB DDR5</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Setup 3 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="images/setup3.jpg" alt="Setup Watercooling Custom White" loading="lazy"
+                                width="600" height="450">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Custom Loop White</h3>
+                            <div class="specs-tags">
+                                <span class="tech-tag">RTX 5070 Ti</span>
+                                <span class="tech-tag">Ryzen 7 7800X3D</span>
+                                <span class="tech-tag">Watercooling</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Setup 4 -->
+                    <article class="gallery-item">
+                        <div class="gallery-image">
+                            <img src="images/setup4.jpg" alt="Setup Gaming Full HD" loading="lazy" width="600"
+                                height="450">
+                        </div>
+                        <div class="gallery-content">
+                            <h3>Setup Gaming Full HD</h3>
+                            <div class="specs-tags">
+                                <span class="tech-tag">RTX 4060 Ti</span>
+                                <span class="tech-tag">Ryzen 5 7600X</span>
+                                <span class="tech-tag">Compact</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contactez-moi</h2>
+                <p class="section-subtitle">Prêt à construire votre setup de rêve ?</p>
+
+                <div class="contact-content">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <h3>Email</h3>
+                        <a href="mailto:jacques.tirot@outlook.com?subject=Demande de configuration PC&body=Bonjour,%0D%0A%0D%0AVoici les informations pour ma demande :%0D%0A%0D%0A- Besoins (Conseil, Montage, Accompagnement de A à Z) :%0D%0A- Budget :%0D%0A- Deadline (approximative) :%0D%0A- Envie particulière (Esthétisme, particularité) :%0D%0A%0D%0AMerci !"
+                            class="contact-btn">
+                            Envoyez votre demande
+                        </a>
+                        <p class="contact-note">Réponse sous 24h</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -145,7 +199,14 @@
         </div>
     </footer>
 
+    <!-- Utilitaires -->
+    <button class="back-to-top" aria-label="Retour en haut"></button>
+    <button class="theme-toggle" aria-label="Changer le thème"></button>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
