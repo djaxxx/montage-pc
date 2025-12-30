@@ -28,7 +28,7 @@ function initNavigation() {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
     if (mobileBtn && navMenu) {
         mobileBtn.addEventListener('click', () => {
             mobileBtn.classList.toggle('active');
@@ -58,15 +58,15 @@ function initNavigation() {
 
     // Active Link Highlighting
     const sections = document.querySelectorAll('section[id]');
-    
+
     window.addEventListener('scroll', () => {
         let current = '';
         const scrollY = window.pageYOffset;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            
+
             // Offset logic for better sticky header handling
             if (scrollY >= (sectionTop - 150)) {
                 current = section.getAttribute('id');
@@ -75,7 +75,8 @@ function initNavigation() {
 
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
+            // Only highlight if we have a current section and the link points to it
+            if (current && link.getAttribute('href').includes(current)) {
                 link.classList.add('active');
             }
         });
@@ -90,13 +91,13 @@ function initScrollEffects() {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    
+
                 window.scrollTo({
                     top: offsetPosition,
                     behavior: "smooth"
@@ -125,7 +126,7 @@ function initObservers() {
 
     // Apply to elements
     const animatedElements = document.querySelectorAll('.service-card, .gallery-item, .section-title, .contact-card');
-    
+
     animatedElements.forEach((el, index) => {
         // Simple staged animation delay
         el.style.opacity = '0';
@@ -152,18 +153,18 @@ function initParticles() {
 function createParticle(x, y) {
     const particle = document.createElement('div');
     particle.className = 'cursor-particle';
-    
+
     // Random direction
     const tx = (Math.random() - 0.5) * 50;
-    const ty = (Math.random() - 0.5) * 50; 
-    
+    const ty = (Math.random() - 0.5) * 50;
+
     particle.style.setProperty('--tx', `${tx}px`);
     particle.style.setProperty('--ty', `${ty}px`);
     particle.style.left = `${x}px`;
     particle.style.top = `${y}px`;
-    
+
     document.body.appendChild(particle);
-    
+
     // Auto remove
     setTimeout(() => {
         particle.remove();
@@ -173,7 +174,7 @@ function createParticle(x, y) {
 /* === BACK TO TOP === */
 function initBackToTop() {
     const btn = document.querySelector('.back-to-top');
-    
+
     if (btn) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 400) {
@@ -182,7 +183,7 @@ function initBackToTop() {
                 btn.classList.remove('visible');
             }
         }, { passive: true });
-        
+
         btn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
