@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Guide d'entretien PC et FAQ Windows. Des astuces simples pour un PC rapide : démarrage, nettoyage, mises à jour.">
+    <meta name="keywords"
+        content="entretien pc, nettoyage windows, pc lent, fichiers temporaires, optimisation démarrage, updates">
+    <meta name="author" content="PC sur Mesure">
+    <meta property="og:title" content="FAQ Entretien Windows | PC sur Mesure">
+    <meta property="og:description" content="Les gestes simples pour garder votre PC performant.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="images/setup1.jfif">
+
+    <title>FAQ Entretien Windows | PC sur Mesure</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+
+<body>
+    <div class="cursor-particle-container"></div>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">PC<span class="highlight">Pro</span></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#realisations" class="nav-link">Réalisations</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-small">
+            <div class="hero-bg-elements">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Guide</span>
+                    <span class="title-line">Entretien & FAQ</span>
+                </h1>
+                <p class="hero-subtitle">Les bons réflexes pour un PC en pleine forme</p>
+            </div>
+        </section>
+
+        <section class="guide-content">
+            <div class="container mobile-padding">
+                <div class="guide-intro">
+                    <p>Entretenir son PC ne devrait pas être compliqué. Voici les gestes simples à faire régulièrement
+                        pour garder une machine rapide et saine.</p>
+                </div>
+
+                <div class="faq-grid">
+                    <!-- Tip 1: Startup Apps -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
+                            <h3>PC lent au démarrage ?</h3>
+                        </div>
+                        <div class="faq-body">
+                            <p>Des logiciels inutiles se lancent souvent tout seuls.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Faites <strong>CTRL + SHIFT + ECHAP</strong> pour ouvrir le Gestionnaire des
+                                        tâches.</li>
+                                    <li>Allez dans l'onglet <strong>Applications de démarrage</strong>.</li>
+                                    <li><strong>Désactivez</strong> tout ce qui n'est pas essentiel (Spotify, Steam,
+                                        Cortana...).</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 2: Temp Files -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-trash-can"></i></div>
+                            <h3>Disque dur plein ?</h3>
+                        </div>
+                        <div class="faq-body">
+                            <p>Windows accumule des fichiers temporaires qui prennent de la place pour rien.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Appuyez sur <strong>Windows + R</strong>.</li>
+                                    <li>Tapez <code>%temp%</code> et validez.</li>
+                                    <li>Sélectionnez tous les fichiers (CTRL + A) et <strong>supprimez-les</strong>.
+                                    </li>
+                                    <li>Videz votre corbeille.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 3: Windows Updates -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-brands fa-windows"></i></div>
+                            <h3>Mises à jour ?</h3>
+                        </div>
+                        <div class="faq-body">
+                            <p>Garder Windows à jour est vital pour la sécurité et les performances.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Allez dans <strong>Paramètres > Windows Update</strong>.</li>
+                                    <li>Cliquez sur "Rechercher des mises à jour".</li>
+                                    <li>Installez tout et redémarrez si besoin.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 4: High Performance Mode -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+                            <h3>Performances en jeu ?</h3>
+                        </div>
+                        <div class="faq-body">
+                            <p>Assurez-vous que Windows ne bride pas votre PC.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Cherchez "Choisir un mode de gestion d'alimentation".</li>
+                                    <li>Sélectionnez <strong>Performances Élevées</strong>.</li>
+                                    <li>Si vous avez une carte Nvidia, activez le "Mode Gestion de l'alimentation :
+                                        Privilégier les performances maximales" dans le panneau de configuration Nvidia.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guide-cta">
+                    <h3>Besoin d'un nettoyage complet ?</h3>
+                    <p>Si votre PC rame toujours, il a peut-être besoin d'un dépoussiérage ou d'une maintenance
+                        approfondie.</p>
+                    <a href="index.html#contact" class="btn btn-primary">Me contacter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PC sur Mesure. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut"></button>
+    <script src="script.js"></script>
+</body>
+
+</html>
