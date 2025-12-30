@@ -7,7 +7,7 @@
     <meta name="description"
         content="Montage PC sur mesure haut de gamme. Configurations gaming, workstation et watercooling custom. Design unique et performance maximale.">
     <meta name="keywords"
-        content="PC gamer, montage PC, configuration sur mesure, watercooling, workstation, setup gaming, hardware">
+        content="PC gamer, montage PC, configuration sur mesure, réparation pc portable, nettoyage pc, optimisation windows, watercooling, workstation, dépannage informatique">
     <meta name="author" content="PC sur Mesure">
     <meta property="og:title" content="PC sur Mesure | Configurations Haut de Gamme">
     <meta property="og:description"
@@ -46,14 +46,44 @@
       "name": "PC Pro",
       "alternateName": "PC sur Mesure",
       "image": "https://djaxxx.github.io/montage-pc/images/setup1.jfif",
-      "description": "Montage PC sur mesure haut de gamme. Configurations gaming, workstation et watercooling custom.",
+      "description": "Expert montage PC sur mesure, dépannage informatique et maintenance PC portable. Optimisation Windows et Watercooling custom.",
       "url": "https://djaxxx.github.io/montage-pc/",
+      "email": "jacques.tirot@outlook.com",
+      "priceRange": "€€€",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "FR"
       },
-      "priceRange": "€€€",
-      "email": "jacques.tirot@outlook.com"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services Informatiques",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Montage PC Sur Mesure",
+              "description": "Assemblage professionnel de configurations gaming, workstation et bureautique avec cable management soigné."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance & Réparation PC Portable",
+              "description": "Nettoyage intégral, changement pâte thermique, remplacement écran/clavier et boost performances."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Optimisation Windows & Gaming",
+              "description": "Tweaks système, mises à jour pilotes et debloat pour maximiser les FPS et la réactivité."
+            }
+          }
+        ]
+      }
     }
     </script>
 </head>
@@ -62,13 +92,13 @@
     <div class="cursor-particle-container"></div>
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">PC<span class="highlight">Pro</span></div>
+            <a href="index.html" class="logo">PC<span class="highlight">Pro</span></a>
             <nav>
                 <ul class="nav-menu">
+                    <li><a href="guide-optimisation.html" class="nav-link btn-nav-highlight">Guide</a></li>
                     <li><a href="#accueil" class="nav-link">Accueil</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#realisations" class="nav-link">Réalisations</a></li>
-                    <li><a href="guide-optimisation.html" class="nav-link">Guide</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -134,15 +164,40 @@
                 <!-- New Distinct Section for Laptops -->
                 <div class="service-featured">
                     <div class="featured-content">
-                        <div class="featured-icon"><i class="fa-solid fa-laptop-medical"></i></div>
+                        <div class="featured-icon">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                        </div>
                         <div class="featured-text">
                             <h3>Expertise PC Portables & Maintenance</h3>
-                            <p>Un service dédié pour vos ordinateurs portables toutes marques.</p>
+                            <p>Un service complet pour redonner vie à votre machine : assistance, dépannage et
+                                optimisation.</p>
                             <ul class="featured-list">
-                                <li><i class="fa-solid fa-check"></i> Diagnostic complet & Dépannage</li>
-                                <li><i class="fa-solid fa-check"></i> Optimisation et nettoyage système</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Nettoyage Intégral :</strong>
+                                    Dépoussiérage Hardware & Nettoyage Software</li>
+                                <li><i class="fa-solid fa-check"></i> <strong>Optimisation & Réparation :</strong>
+                                    Changement pâte thermique, boost FPS & Dépannage</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Guide Promo Section -->
+        <section class="guide-promo-section">
+            <div class="container">
+                <div class="guide-promo-card">
+                    <div class="promo-content">
+                        <span class="promo-badge">Nouveau</span>
+                        <h2>Un PC plus rapide, gratuitement ?</h2>
+                        <p>Optimisez votre Windows pour gagner en FPS et en réactivité. Finis les lenteurs et les
+                            bloatwares.</p>
+                        <a href="guide-optimisation.html" class="btn btn-glow">
+                            <i class="fa-brands fa-windows"></i> Voir le Guide d'Optimisation
+                        </a>
+                    </div>
+                    <div class="promo-visual">
+                        <i class="fa-solid fa-gauge-high"></i>
                     </div>
                 </div>
             </div>

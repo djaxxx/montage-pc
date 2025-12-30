@@ -979,21 +979,138 @@ section {
     }
 
     .featured-list {
-        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align text to start for better readability */
+        text-align: left;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .featured-list li {
+        flex-direction: column;
+        /* Stack icon/title and text */
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
     }
 }
 
-
-
 /* === GUIDE FAQ STYLES === */
-.hero-small {
-    min-height: 35vh;
-    padding-top: 100px;
-    background: radial-gradient(circle at top right, rgba(0, 212, 255, 0.1), transparent 50%),
-        radial-gradient(circle at bottom left, rgba(123, 44, 191, 0.1), transparent 50%);
+/* === GUIDE HERO REDESIGN === */
+.guide-hero {
+    min-height: 100vh;
+    /* Taller */
+    padding-top: 120px;
+    background: radial-gradient(circle at 50% 50%, rgba(123, 44, 191, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 40%);
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Background Icon */
+.guide-hero::before {
+    content: '\f0ad';
+    /* fa-wrench */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    font-size: 30rem;
+    color: rgba(255, 255, 255, 0.015);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-title-large {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+}
+
+.hero-title-large .gradient-text {
+    font-size: clamp(4rem, 8vw, 8rem);
+    /* Huge responsive text */
+    font-weight: 800;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    filter: drop-shadow(0 0 30px rgba(123, 44, 191, 0.4));
+}
+
+.hero-title-large .white-text {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 3.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stats Bar */
+.hero-stats-bar {
+    display: inline-flex;
+    gap: 3rem;
+    /* More space */
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-main);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-badge i {
+    color: var(--accent);
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px var(--accent);
+    -webkit-font-smoothing: antialiased;
+    transform: translateZ(0);
+}
+
+@media (max-width: 768px) {
+    .hero-stats-bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 2rem;
+    }
 }
 
 .guide-content {
@@ -1123,6 +1240,12 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
+.guide-cta p {
+    margin-bottom: 2.5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
 @media (max-width: 768px) {
     .faq-grid {
         grid-template-columns: 1fr;
@@ -1132,9 +1255,215 @@ section {
         padding: 1.5rem;
     }
 
+
     .faq-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+}
+
+/* === Guide Visual Refinements === */
+.card-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+.meta-badge i {
+    color: var(--primary);
+}
+
+kbd {
+    background: linear-gradient(180deg, #3a3a3a 0%, #252525 100%);
+    border: 1px solid #4a4a4a;
+    border-bottom: 3px solid #1a1a1a;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    /* Plus lisible que monospace */
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.4rem 0.7rem;
+    margin: 0 0.3rem;
+    white-space: nowrap;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+    position: relative;
+    top: -2px;
+    /* Slight lift */
+}
+
+kbd:hover {
+    transform: translateY(2px);
+    border-bottom-width: 1px;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Styled Ordered List */
+.solution-steps ol {
+    list-style: none;
+    /* Remove default numbers */
+    padding-left: 0;
+    counter-reset: step-counter;
+}
+
+.solution-steps li {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+}
+
+.solution-steps li::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    /* Center text vertically */
+    font-weight: bol;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+
+/* === NAV HIGHLIGHT & PROMO BUTTONS === */
+.logo {
+    text-decoration: none;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.nav-link.btn-nav-highlight {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 44, 191, 0.1));
+    border: 1px solid var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: var(--primary) !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link.btn-nav-highlight:hover {
+    background: var(--primary);
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+/* === HOMEPAGE GUIDE PROMO === */
+.guide-promo-section {
+    padding: 4rem 0;
+    background: linear-gradient(to bottom, var(--bg-dark), rgba(0, 0, 0, 0.8));
+}
+
+.guide-promo-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.guide-promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-main);
+}
+
+.promo-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.promo-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.promo-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.btn-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.8rem 1.5rem;
+    background: var(--gradient-main);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.promo-visual {
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .guide-promo-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .promo-visual {
+        display: none;
     }
 }

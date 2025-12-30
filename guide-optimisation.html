@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Guide d'entretien PC et FAQ Windows. Des astuces simples pour un PC rapide : démarrage, nettoyage, mises à jour.">
+        content="Guide ultime pour optimiser Windows 10/11 : boost FPS, nettoyage, démarrage rapide et maintenance. Les meilleures astuces pour un PC performant.">
     <meta name="keywords"
-        content="entretien pc, nettoyage windows, pc lent, fichiers temporaires, optimisation démarrage, updates">
+        content="optimisation windows, boost fps, pc lent, nettoyage pc, maintenance ordinateur, windows 11 lent, accélérer pc, suppression bloatware">
     <meta name="author" content="PC sur Mesure">
-    <meta property="og:title" content="FAQ Entretien Windows | PC sur Mesure">
-    <meta property="og:description" content="Les gestes simples pour garder votre PC performant.">
+    <meta property="og:title" content="Guide Optimisation Windows & Maintenance PC | PC Pro">
+    <meta property="og:description"
+        content="Les meilleures astuces pour booster votre PC : FPS, Démarrage, Nettoyage. Simple et efficace.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="images/setup1.jfif">
 
-    <title>FAQ Entretien Windows | PC sur Mesure</title>
+    <title>Guide Optimisation Windows & Maintenance PC | PC Pro</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +24,55 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="jKaFR0q-_-6tGr4zbRWIAjlNYF6Yvpjjh0VHNyRGQ-E" />
+
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Comment accélérer le démarrage de Windows ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Désactivez les programmes inutiles dans le Gestionnaire des tâches (Ctrl+Shift+Echap) > onglet Applications de démarrage."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Comment nettoyer les fichiers inutiles sur PC ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Utilisez la commande %temp% dans Exécuter (Win+R) et supprimez tous les fichiers temporaires pour libérer de l'espace."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Comment améliorer les FPS en jeu sur Windows ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Activez le mode 'Performances optimales' dans les options d'alimentation et réglez votre écran sur sa fréquence de rafraîchissement maximale (144Hz/165Hz)."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Faut-il désactiver l'accélération souris pour jouer ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, désactivez 'Améliorer la précision du pointeur' dans les paramètres de souris Windows pour une visée brute (raw input) plus précise."
+        }
+      }]
+    }
+    </script>
 </head>
 
 <body>
     <div class="cursor-particle-container"></div>
     <header class="navbar">
         <div class="nav-container">
-            <div class="logo">PC<span class="highlight">Pro</span></div>
+            <a href="index.html" class="logo">PC<span class="highlight">Pro</span></a>
             <nav>
                 <ul class="nav-menu">
+                    <li><a href="guide-optimisation.html" class="nav-link btn-nav-highlight">Guide</a></li>
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
                     <li><a href="index.html#services" class="nav-link">Services</a></li>
                     <li><a href="index.html#realisations" class="nav-link">Réalisations</a></li>
@@ -47,18 +88,34 @@
     </header>
 
     <main>
-        <section class="hero hero-small">
+        <section class="hero guide-hero">
             <div class="hero-bg-elements">
                 <div class="circle circle-1"></div>
                 <div class="circle circle-2"></div>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-line">Guide</span>
-                    <span class="title-line">Entretien & FAQ</span>
+                <h1 class="hero-title-large">
+                    <span class="gradient-text">GUIDE</span>
+                    <span class="white-text">OPTIMISATION</span>
                 </h1>
-                <p class="hero-subtitle">Les bons réflexes pour un PC en pleine forme</p>
+                <p class="hero-subtitle">Les bons réflexes pour un PC durable et performant.</p>
+
+                <!-- Quick Stats Bar -->
+                <div class="hero-stats-bar">
+                    <div class="stat-badge">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Boost FPS</span>
+                    </div>
+                    <div class="stat-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Sécurité</span>
+                    </div>
+                    <div class="stat-badge">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>10 min / mois</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -72,16 +129,21 @@
                 <div class="faq-grid">
                     <!-- Tip 1: Startup Apps -->
                     <div class="faq-card">
+
                         <div class="faq-header">
                             <div class="icon-box"><i class="fa-solid fa-rocket"></i></div>
                             <h3>PC lent au démarrage ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 2 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1x / mois</span>
                         </div>
                         <div class="faq-body">
                             <p>Des logiciels inutiles se lancent souvent tout seuls.</p>
                             <div class="solution-steps">
                                 <ol>
-                                    <li>Faites <strong>CTRL + SHIFT + ECHAP</strong> pour ouvrir le Gestionnaire des
-                                        tâches.</li>
+                                    <li>Faites <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ECHAP</kbd> pour ouvrir le
+                                        Gestionnaire des tâches.</li>
                                     <li>Allez dans l'onglet <strong>Applications de démarrage</strong>.</li>
                                     <li><strong>Désactivez</strong> tout ce qui n'est pas essentiel (Spotify, Steam,
                                         Cortana...).</li>
@@ -96,13 +158,18 @@
                             <div class="icon-box"><i class="fa-solid fa-trash-can"></i></div>
                             <h3>Disque dur plein ?</h3>
                         </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 1 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1x / semaine</span>
+                        </div>
                         <div class="faq-body">
                             <p>Windows accumule des fichiers temporaires qui prennent de la place pour rien.</p>
                             <div class="solution-steps">
                                 <ol>
-                                    <li>Appuyez sur <strong>Windows + R</strong>.</li>
+                                    <li>Appuyez sur <kbd>Windows</kbd> + <kbd>R</kbd>.</li>
                                     <li>Tapez <code>%temp%</code> et validez.</li>
-                                    <li>Sélectionnez tous les fichiers (CTRL + A) et <strong>supprimez-les</strong>.
+                                    <li>Sélectionnez tout (<kbd>CTRL</kbd> + <kbd>A</kbd>) et
+                                        <strong>supprimez</strong>.
                                     </li>
                                     <li>Videz votre corbeille.</li>
                                 </ol>
@@ -112,9 +179,14 @@
 
                     <!-- Tip 3: Windows Updates -->
                     <div class="faq-card">
+
                         <div class="faq-header">
                             <div class="icon-box"><i class="fa-brands fa-windows"></i></div>
                             <h3>Mises à jour ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 5 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> Hebdo</span>
                         </div>
                         <div class="faq-body">
                             <p>Garder Windows à jour est vital pour la sécurité et les performances.</p>
@@ -130,9 +202,14 @@
 
                     <!-- Tip 4: High Performance Mode -->
                     <div class="faq-card">
+
                         <div class="faq-header">
                             <div class="icon-box"><i class="fa-solid fa-gauge-high"></i></div>
                             <h3>Performances en jeu ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 1 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
                         </div>
                         <div class="faq-body">
                             <p>Assurez-vous que Windows ne bride pas votre PC.</p>
@@ -143,6 +220,54 @@
                                     <li>Si vous avez une carte Nvidia, activez le "Mode Gestion de l'alimentation :
                                         Privilégier les performances maximales" dans le panneau de configuration Nvidia.
                                     </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 5: Refresh Rate -->
+                    <div class="faq-card">
+
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-desktop"></i></div>
+                            <h3>Écran pas fluide ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 30 sec</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Avoir un écran 144Hz ne sert à rien si Windows est bloqué à 60Hz.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Clic droit sur le bureau > <strong>Paramètres d'affichage</strong>.</li>
+                                    <li>Descendez jusqu'à <strong>Affichage avancé</strong>.</li>
+                                    <li>Dans "Choisir une fréquence d'actualisation", sélectionnez le
+                                        <strong>maximum</strong> (144Hz, 165Hz...).
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 7: Xbox Game Bar -->
+                    <div class="faq-card">
+
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-brands fa-xbox"></i></div>
+                            <h3>Micro-lags en jeu ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 1 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>L'overlay Xbox tourne en fond et peut causer des chutes de FPS.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Faites <kbd>Windows</kbd> + <kbd>I</kbd> pour ouvrir les paramètres.</li>
+                                    <li>Allez dans <strong>Jeux</strong> > <strong>Xbox Game Bar</strong>.</li>
+                                    <li><strong>Désactivez</strong> l'option "Ouvrir la Xbox Game Bar...".</li>
                                 </ol>
                             </div>
                         </div>
