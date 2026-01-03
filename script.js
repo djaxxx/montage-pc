@@ -9,7 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initObservers();
     initParticles();
     initBackToTop();
+    initCopyButtons();
 });
+
+/* === COPY BUTTONS === */
+function initCopyButtons() {
+    const copyBtns = document.querySelectorAll('.copy-btn');
+
+    copyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const textToCopy = btn.getAttribute('data-copy');
+            if (textToCopy) {
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                });
+            }
+        });
+    });
+}
 
 /* === PRELOADER === */
 function initPreloader() {

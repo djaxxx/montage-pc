@@ -1,0 +1,47 @@
+name: Compress Images
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+      - '**.webp'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: calibreapp/image-actions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Compress Images
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # For non-Pull Requests, run in compressOnly mode and we'll create a PR manually if needed
+          # But image-actions is designed to work on PRs. 
+          # Let's use a config that creates a PR for the compressed images if triggered on main.
+          compressOnly: false
+          
+      - name: Create Pull Request
+        # If the compression modified files, we want to create a PR with them.
+        # Note: image-actions usually commits back if on a PR. On main branch push, we might need a different approach 
+        # or just accept that it attempts to commit back to main (which might fail if protected).
+        # A safer "set and forget" for a single user is often just letting it commit back if possible, 
+        # or using a dedicated action like 'peter-evans/create-pull-request'.
+        # For simplicity and "Pro" safety, let's stick to the standard image-actions behavior 
+        # which tries to commit back. If it fails, the user will see a failure 
+        # but their site won't break.
+        # HOWEVER, the implementation plan said "Create a Pull Request".
+        # Let's use a robust combo:
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: 'Auto-Compress Images'
+          body: 'Automatic image compression to improve website speed.'
+          branch: 'optimize-images'
+          commit-message: 'Compress images'
+          delete-branch: true

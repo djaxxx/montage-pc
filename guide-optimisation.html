@@ -55,10 +55,24 @@
         }
       }, {
         "@type": "Question",
-        "name": "Faut-il désactiver l'accélération souris pour jouer ?",
+        "name": "Comment rendre son PC plus réactif ?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oui, désactivez 'Améliorer la précision du pointeur' dans les paramètres de souris Windows pour une visée brute (raw input) plus précise."
+          "text": "Désactivez les effets visuels et animations dans les paramètres système avancés (sysdm.cpl) pour une interface Windows instantanée."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Faut-il activer le Mode Jeu sous Windows ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui, activez le 'Mode Jeu' dans les paramètres pour que Windows priorise vos jeux et mette en pause les tâches de fond."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Comment réduire son ping (latence) ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Changez vos serveurs DNS pour ceux de Cloudflare (1.1.1.1) ou Google (8.8.8.8) via les propriétés réseau (ncpa.cpl)."
         }
       }]
     }
@@ -156,7 +170,7 @@
                     <div class="faq-card">
                         <div class="faq-header">
                             <div class="icon-box"><i class="fa-solid fa-trash-can"></i></div>
-                            <h3>Disque dur plein ?</h3>
+                            <h3>Temps de chargement long&nbsp;?</h3>
                         </div>
                         <div class="card-meta">
                             <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 1 min</span>
@@ -167,7 +181,9 @@
                             <div class="solution-steps">
                                 <ol>
                                     <li>Appuyez sur <kbd>Windows</kbd> + <kbd>R</kbd>.</li>
-                                    <li>Tapez <code>%temp%</code> et validez.</li>
+                                    <li>Tapez <span class="code-wrapper"><code>%temp%</code><button class="copy-btn"
+                                                aria-label="Copier" data-copy="%temp%"><i
+                                                    class="fa-regular fa-copy"></i></button></span> et validez.</li>
                                     <li>Sélectionnez tout (<kbd>CTRL</kbd> + <kbd>A</kbd>) et
                                         <strong>supprimez</strong>.
                                     </li>
@@ -194,6 +210,8 @@
                                 <ol>
                                     <li>Allez dans <strong>Paramètres > Windows Update</strong>.</li>
                                     <li>Cliquez sur "Rechercher des mises à jour".</li>
+                                    <li>Allez aussi dans <strong>Options avancées > Mises à jour facultatives</strong>
+                                        (pilotes, etc.).</li>
                                     <li>Installez tout et redémarrez si besoin.</li>
                                 </ol>
                             </div>
@@ -268,6 +286,88 @@
                                     <li>Faites <kbd>Windows</kbd> + <kbd>I</kbd> pour ouvrir les paramètres.</li>
                                     <li>Allez dans <strong>Jeux</strong> > <strong>Xbox Game Bar</strong>.</li>
                                     <li><strong>Désactivez</strong> l'option "Ouvrir la Xbox Game Bar...".</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 6: Game Mode -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-gamepad"></i></div>
+                            <h3>Mode Jeu activé ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 30 sec</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Windows possède un mode dédié qui coupe les tâches de fond inutiles quand vous jouez.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Ouvrez les paramètres (<kbd>Windows</kbd> + <kbd>I</kbd>).</li>
+                                    <li>Allez dans <strong>Jeux</strong> > <strong>Mode Jeu</strong>.</li>
+                                    <li>Basculez l'interrupteur sur <strong>Activé</strong>.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 8: DNS / Connection -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
+                            <h3>Meilleur Ping?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 2 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Les DNS des opérateurs peuvent être lents. Ceux de Cloudflare (1.1.1.1) sont <strong>plus
+                                    rapides</strong> et <strong>plus privés</strong> (ne vendent pas vos données).</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Faites <kbd>Windows</kbd> + <kbd>R</kbd>, tapez <span
+                                            class="code-wrapper"><code>ncpa.cpl</code><button class="copy-btn"
+                                                aria-label="Copier" data-copy="ncpa.cpl"><i
+                                                    class="fa-regular fa-copy"></i></button></span> et validez.</li>
+                                    <li>Clic droit sur votre connexion (Ethernet/Wi-Fi) > <strong>Propriétés</strong>.
+                                    </li>
+                                    <li>Double-cliquez sur <strong>Protocole Internet version 4 (TCP/IPv4)</strong>.
+                                    </li>
+                                    <li>Cochez "Utiliser l'adresse de serveur DNS suivante" et mettez :<br>
+                                        Préféré : <code>1.1.1.1</code> (Cloudflare)<br>
+                                        Auxiliaire : <code>1.0.0.1</code></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tip 9: Visual Effects -->
+                    <div class="faq-card">
+                        <div class="faq-header">
+                            <div class="icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h3>PC plus réactif ?</h3>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-badge time"><i class="fa-regular fa-clock"></i> 1 min</span>
+                            <span class="meta-badge freq"><i class="fa-solid fa-rotate-right"></i> 1 fois</span>
+                        </div>
+                        <div class="faq-body">
+                            <p>Les animations de fenêtres donnent une impression de lourdeur. Désactivez-les pour un
+                                Windows instantané.</p>
+                            <div class="solution-steps">
+                                <ol>
+                                    <li>Faites <kbd>Windows</kbd> + <kbd>R</kbd>, tapez <span
+                                            class="code-wrapper"><code>sysdm.cpl</code><button class="copy-btn"
+                                                aria-label="Copier" data-copy="sysdm.cpl"><i
+                                                    class="fa-regular fa-copy"></i></button></span> et validez.</li>
+                                    <li>Onglet <strong>Paramètres système avancés</strong> > Performances >
+                                        <strong>Paramètres</strong>.
+                                    </li>
+                                    <li>Sélectionnez <strong>Ajuster afin d'obtenir les meilleures performances</strong>
+                                        (gardez "Lisser les polices..." pour la lisibilité).</li>
                                 </ol>
                             </div>
                         </div>
